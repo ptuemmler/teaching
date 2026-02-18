@@ -203,7 +203,7 @@ with ui.layout_column_wrap(width="600px"):
 
 @reactive.effect
 async def _():
-    response = await pyfetch("/apps/coherent-diffractive-imaging/truncated_octahedron.stl")
+    response = await pyfetch("https://physicsapps.github.io/teaching/apps/coherent-diffractive-imaging/truncated_octahedron.stl")
     data = await response.bytes()
 
     with open("truncated_octahedron.stl", "wb") as f:
